@@ -1,0 +1,10 @@
+<section>
+    <input type="email" placeholder="E-Mail" #emailField required>
+    <input type="password" placeholder="Passwort" #passwordField required>
+
+    <div>
+        <button routerLink="/dashboard" routerLinkActive="active">anmelden</button>
+        <button routerLink="/register" routerLinkActive="active">registrieren</button>
+    </div>
+</section>
+<router-outlet></router-outlet>
