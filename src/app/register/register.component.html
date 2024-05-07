@@ -1,13 +1,13 @@
 <section>
         <input type="text" placeholder="Name" #nameField>
         <input type="email" placeholder="E-Mail" #emailField>
-        <input type="password" placeholder="Passwort" #passwordField>
+        <input type="text" placeholder="Passwort" #passwordField>
         <div>
             <input type="checkbox">
             Ich stimme zu
         </div>
     <div>
-        <button routerLink="/" routerLinkActive="active" (click)="createAccount()">Account erstellen</button>
+        <button  routerLinkActive="active" (click)="createAccount()">Account erstellen</button>
     </div>
 </section>
 <router-outlet></router-outlet>

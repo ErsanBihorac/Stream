@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
 
@@ -11,10 +11,14 @@ import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-  constructor() { }
-  
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('passwordField') passwordField!: ElementRef;
 
   createAccount() {
-    console.log('working');
+    let name = this.nameField.nativeElement.value
+    let email = this.emailField.nativeElement.value
+    let password = this.passwordField.nativeElement.value
+    console.log(name, email, password);
   }
 }
